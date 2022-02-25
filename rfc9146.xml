@@ -16,7 +16,7 @@
     <title abbrev="DTLS 1.2 Connection ID">Connection Identifier for DTLS 1.2</title>
     <seriesInfo name="RFC" value="9146"/>
     <author initials="E." surname="Rescorla" fullname="Eric Rescorla" role="editor">
-      <organization>RTFM, Inc.</organization>
+      <organization>Mozilla</organization>
       <address>
         <email>ekr@rtfm.com</email>
       </address>
@@ -39,7 +39,7 @@
         <email>achim.kraus@bosch.io</email>
       </address>
     </author>
-    <date year="2022" month="January"/>
+    <date year="2022" month="February"/>
     <area>Security</area>
     <workgroup>TLS</workgroup>
 
@@ -611,7 +611,7 @@ registry. The tls12_cid content type is only applicable to DTLS 1.2.</t>
 <author initials='N' surname='Modadugu' fullname='Nagendra Modadugu'>
 <organization />
 </author>
-<date year='2022' month='January' />
+<date year='2022' month='February' />
 </front>
 <seriesInfo name="RFC" value="9147"/>
 <seriesInfo name="DOI" value="10.17487/RFC9147"/>
