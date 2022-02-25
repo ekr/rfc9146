@@ -63,7 +63,7 @@ and record layer padding.</t>
     <section anchor="introduction" numbered="true" toc="default">
       <name>Introduction</name>
       <t>The Datagram Transport Layer Security (DTLS) protocol <xref target="RFC6347" format="default"/> was designed for
-securing connectionless transports, like UDP. DTLS, like TLS, starts
+securing application data sent over datagram transports. DTLS, like TLS, starts
 with a handshake, which can be computationally demanding (particularly
 when public key cryptography is used). After a successful handshake,
 symmetric key cryptography is used to apply data origin
@@ -97,7 +97,7 @@ a mechanism is provided for adding padding to obfuscate the plaintext length.</t
        are to be interpreted as described in BCP&nbsp;14
        <xref target="RFC2119"/> <xref target="RFC8174"/> when, and only
        when, they appear in all capitals, as shown here.</t>
-      <t>This document assumes familiarity with DTLS 1.2 <xref target="RFC6347" format="default"/>. The presentation language 
+      <t>This document assumes familiarity with DTLS 1.2 <xref target="RFC6347" format="default"/>. The presentation language
 used in this document is described in <xref target="RFC8446" sectionFormat="of" section="3"/>.</t>
     </section>
     <section anchor="the-connectionid-extension" numbered="true" toc="default">
@@ -410,7 +410,7 @@ application layer traffic.</t>
       <t>Note that datagrams that pass the DTLS cryptographic verification procedures
 but do not trigger a change of peer address are still valid DTLS records and
 are still to be passed to the application.</t>
-      <t indent="3">(*) Note: Application protocols that implement protection against spoofed addresses 
+      <t indent="3">(*) Note: Application protocols that implement protection against spoofed addresses
 depend on being aware of changes in peer addresses so that they can engage the necessary
 mechanisms. When delivered such an event, an address validation mechanism specific to the application layer can be triggered -- for example, one that is based on
 successful exchange of a minimal amount of ping-pong traffic with the peer.
@@ -499,7 +499,7 @@ sequence number encryption is available.</t>
       <t>This specification introduces record padding for the CID-enhanced record layer,
 which is a privacy feature not available with the original DTLS 1.2 specification.
 Padding allows the size of the ciphertext to be inflated, making traffic analysis
-more difficult. More details about record padding can be found in 
+more difficult. More details about record padding can be found in
 Section&nbsp;<xref target="RFC8446" section="5.4"
  sectionFormat="bare"/> and Appendix&nbsp;<xref target="RFC8446" section="E.3"
  sectionFormat="bare"/> of <xref target="RFC8446"/>.</t>
@@ -636,8 +636,8 @@ registry. The tls12_cid content type is only applicable to DTLS 1.2.</t>
     <section anchor="acknowledgements" numbered="false" toc="default">
       <name>Acknowledgements</name>
       <t>We would like to thank <contact fullname="Hanno Becker"/>, <contact fullname="
-Martin Duke"/>, <contact fullname="Lars Eggert"/>, <contact fullname="Ben Kaduk"/>, <contact fullname="Warren Kumari"/>, 
-<contact fullname="Francesca Palombini"/>, <contact fullname="Tom Petch"/>, <contact fullname="John Scudder"/>, <contact fullname="Sean Turner"/>, <contact fullname="Éric Vyncke"/>, and <contact fullname="Robert Wilton"/> 
+Martin Duke"/>, <contact fullname="Lars Eggert"/>, <contact fullname="Ben Kaduk"/>, <contact fullname="Warren Kumari"/>,
+<contact fullname="Francesca Palombini"/>, <contact fullname="Tom Petch"/>, <contact fullname="John Scudder"/>, <contact fullname="Sean Turner"/>, <contact fullname="Éric Vyncke"/>, and <contact fullname="Robert Wilton"/>
 for their review comments.</t>
       <t>Finally, we want to thank the IETF TLS Working Group chairs, <contact fullname="Chris Wood"/>, <contact fullname="Joseph Salowey"/>, and
 <contact fullname="Sean Turner"/>, for their patience, support, and feedback.</t>
